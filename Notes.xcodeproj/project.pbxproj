@@ -25,6 +25,7 @@
 		8EB2832E1703A3200058A358 /* AddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB2832D1703A3200058A358 /* AddNoteViewController.m */; };
 		8EB283301703A6600058A358 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB2832F1703A6600058A358 /* MapKit.framework */; };
 		8EB283321703A6670058A358 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB283311703A6670058A358 /* CoreLocation.framework */; };
+		8ED41BB31703BD16001C737D /* slate.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 8ED41BB21703BD16001C737D /* slate.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		8EB2832D1703A3200058A358 /* AddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNoteViewController.m; sourceTree = "<group>"; };
 		8EB2832F1703A6600058A358 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8EB283311703A6670058A358 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8ED41BB21703BD16001C737D /* slate.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = slate.JPG; path = Notes/slate.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		8EB282E917039FA00058A358 = {
 			isa = PBXGroup;
 			children = (
+				8ED41BB21703BD16001C737D /* slate.JPG */,
 				8EB283311703A6670058A358 /* CoreLocation.framework */,
 				8EB2832F1703A6600058A358 /* MapKit.framework */,
 				8EB282FD17039FA00058A358 /* Notes */,
@@ -194,6 +197,7 @@
 				8EB2830C17039FA00058A358 /* Default@2x.png in Resources */,
 				8EB2830E17039FA00058A358 /* Default-568h@2x.png in Resources */,
 				8EB2831117039FA00058A358 /* MainStoryboard.storyboard in Resources */,
+				8ED41BB31703BD16001C737D /* slate.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +337,7 @@
 				8EB2831F17039FA00058A358 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

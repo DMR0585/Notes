@@ -28,7 +28,7 @@
     [super viewDidLoad];
 	
     // Display a custom background
-    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"slate.jpg"]];
+    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"slate.JPG"]];
     self.view.backgroundColor = background;
     
     // The user can zoom but not scroll

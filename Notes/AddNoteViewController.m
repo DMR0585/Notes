@@ -28,6 +28,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    // Display a custom background
+    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"slate.JPG"]];
+    self.view.backgroundColor = background;
 }
 
 - (void)didReceiveMemoryWarning
