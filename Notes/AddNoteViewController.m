@@ -7,6 +7,7 @@
 //
 
 #import "AddNoteViewController.h"
+#import "DMRTableViewController.h"
 
 @interface AddNoteViewController ()
 
@@ -33,6 +34,15 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)editingChanged {
+    if ([self.titleField.text length] > 0) {
+        [self.doneButton setEnabled:YES];
+    }
+    else {
+        [self.doneButton setEnabled:NO];
+    }
 }
 
 @end
