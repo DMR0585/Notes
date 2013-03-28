@@ -10,6 +10,8 @@ While in Delete Mode, selecting a note deletes it from the table and from CoreDa
 
 In Viewing Mode, selecting a note shows its details. If location services were enabled and authorized when the note was created, the map is displayed. The title of the note is immutable and is displayed as the title of the detail view. Editing the text in the detail view changes it in CoreData as well.
 
+The detail view and add note view both use the same custom background image. The app has an icon (in the part displayed when the home button is pushed once)
+
 My simulator wouldn't allow me to set the authorization status of my Notes app so I could never actually test that part but I used a lot of the same code from my Location app so I hope it works.
 
 The notes are sorted in alphabetical order of the title.
