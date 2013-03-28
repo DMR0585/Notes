@@ -32,6 +32,14 @@
     // Display a custom background
     UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"slate.JPG"]];
     self.view.backgroundColor = background;
+    
+    self.textView.delegate = self;
+    self.titleField.delegate = self;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                          action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,13 +48,31 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)editingChanged {
-    if ([self.titleField.text length] > 0) {
-        [self.doneButton setEnabled:YES];
+// Enables the doneButton only when the titleField has text
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSString *newText = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    BOOL isFieldEmpty = [newText isEqualToString:@""];
+    [self.doneButton setEnabled:!isFieldEmpty];
+    return YES;
+}
+
+// If the user hits return when typing in the titleField, resign the keyboard
+- (BOOL)textFieldShouldReturn:(UITextField*)titleField
+{
+    [titleField resignFirstResponder];
+    return YES;
+}
+
+// Hide whichever keyboard can be hidden
+-(void)dismissKeyboard {
+    if ([self.titleField canResignFirstResponder]) {
+        [self.titleField resignFirstResponder];
     }
-    else {
-        [self.doneButton setEnabled:NO];
+    else if ([self.textView canResignFirstResponder]) {
+        [self.textView resignFirstResponder];
     }
 }
+
+
 
 @end

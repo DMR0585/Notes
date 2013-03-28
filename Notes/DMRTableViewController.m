@@ -33,7 +33,6 @@ BOOL deleteMode;
     DMRAppDelegate *AppDelegate = (DMRAppDelegate *)[[UIApplication sharedApplication] delegate];
     self.managedObjectContext = AppDelegate.managedObjectContext;
     
-    if (AppDelegate.managedObjectContext == nil) NSLog(@"In viewdidload");
     // Set up the fetch request for "Note" entities
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setReturnsObjectsAsFaults:NO];
@@ -55,10 +54,7 @@ BOOL deleteMode;
         [notesArray sortUsingDescriptors:[NSArray arrayWithObject:sorter]];
     }
     
-    NSLog(@"didn't crash yet");
-    
     // Get the locationManager from DMRAppDelegate, initialize if necessary
-    // DMRAppDelegate *AppDelegate = (DMRAppDelegate *)[[UIApplication sharedApplication] delegate];
     if (AppDelegate.locationManager == nil) {
         AppDelegate.locationManager = [[CLLocationManager alloc] init];
     }
